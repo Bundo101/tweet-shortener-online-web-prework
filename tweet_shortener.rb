@@ -25,6 +25,5 @@ def word_substituter(tweet_string)
       #the value from dictionary for that word key
       tweet_array[index] = dictionary[word.downcase]
     end
-  tweet_array.join
-  
+  tweet_array.join(" ")
 end  
