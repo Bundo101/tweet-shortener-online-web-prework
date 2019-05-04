@@ -16,7 +16,8 @@ end
 def word_substituter(tweet_string)
   #split input string into array 
   tweet_array = tweet_string.split
-  tweet_array.each do |word|
-    if dictionary.keys word.downcase 
+  tweet_array.each_with_index do |word, index|
+    if dictionary.keys.include?(word.downcase)
+      tweet_array[word]
   
 end  
