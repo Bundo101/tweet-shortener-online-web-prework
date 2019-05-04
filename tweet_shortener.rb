@@ -38,13 +38,12 @@ def bulk_tweet_shortener(array_tweets)
   end
 end  
 
-def selective_tweet_shortener(array_tweets)
+def selective_tweet_shortener(tweet)
   #iterate through array of tweets
-  array_tweets.each do |tweet|
+  #array_tweets.each do |tweet|
     #check if individual tweet length is 140 chars or more
-    if tweet.length > 139
+  if tweet.length > 139
       #if yes pass that tweet to word_substituter method
-      word_substituter(tweet)
-    end
+    word_substituter(tweet)
   end
 end
