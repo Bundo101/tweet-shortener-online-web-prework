@@ -30,7 +30,21 @@ def word_substituter(tweet_string)
 end  
 
 def bulk_tweet_shortener(array_tweets)
+  #iterate through array of tweets
   array_tweets.each do |tweet|
+    #pass each tweet to word substituter 
+    #method to be shortened and printed
     puts word_substituter(tweet)
   end
 end  
+
+def selective_tweet_shortener(array_tweets)
+  #iterate through array of tweets
+  array_tweets.each do |tweet|
+    #check if individual tweet length is 140 chars or more
+    if tweet.length > 139
+      #if yes pass that tweet to word_substituter method
+      word_substituter(tweet)
+    end
+  end
+end
