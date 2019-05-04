@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # regexp in case I need it again => (/[\s'.,?!:#]/)
 
 def dictionary
@@ -50,5 +51,23 @@ def shortened_tweet_truncator(tweet)
   else
     tweet
   end
+=======
+# regexp incase I need it again => (/[\s'.,?!:#]/)
+
+def dictionary
+  subst_dict = {"hello" => 'hi', "to" => '2', "two" => '2', "too" => '2', "for" => '4', "four" => '4', "be" => 'b', "you" => 'u', "at" => '@', "and" => '&'}
+end
+
+def word_substituter(tweet_string)
+  dictionary
+  tweet_words = tweet_string.split
+  subst_keys = subst_dict.keys
+  tweet_words.each_with_index do |word, index|
+    if subst_keys.include?(word)
+      tweet_words[index] = subst_dict[word]
+    end
+  end
+  tweet_string = tweet_words.join(" ")
+>>>>>>> 53506bda6014453d1e0bfac0ade8101cca660b47
 end
     
